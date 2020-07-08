@@ -1,6 +1,6 @@
 ---
-title: 'Kai Huang'
-image: '/images/team/kai2020.png'
+title: 'Yi-Shin Chan'
+image: '/images/team/ychan32.jpg'
 jobtitle: 'Graduate Student'
 email: 'email at uic.edu'
 ---
