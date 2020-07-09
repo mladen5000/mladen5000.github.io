@@ -1,13 +1,14 @@
 ---
-title: Jekyll Serif - Jekyll Small Business Theme
+title: Finn-Perkins Research Group
 layout: default
 bodyClass: page-home
 ---
 
 <div class="intro pb-4">
   <div class="container">
-    <h1>Serif - Jekyll Small Business Theme.</h1>
-    <p>Our business helps hundreds of customers with their accounting and taxation needs each year.</p>
+    <h1>Our Lab.</h1>
+    <p>Using an integrative systems biology, molecular biology and bioinformatics approach, the lab is elucidating the interplay and contribution of genetics, miRs and microbiome in obesity, kidney, lung and cardiovascular disease. We are using an interdisciplinary approach to analyze primary human samples in disease and health to understand unique signatures associated with different human conditions so we may be able to better prevent and treat disease.</p>
+    <p>Our collaborators around the country and world provide expertise and patient biological samples to help increase diversity and chances to address health disparities, enabling personalized health.</p>
   </div>
 </div>
 
@@ -27,42 +28,44 @@ bodyClass: page-home
   </div>
 </div>
 
+<!-- Research Section --!>
 <div class="container pt-8 pt-md-10">
   <div class="row justify-content-start">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">Our Services</h2>
+      <h2 class="title-3 text-dark mb-3">Our Research.</h2>
     </div>
     {% for service in site.services %}
     <div class="col-12 col-md-4 mb-1">
       <div class="service service-summary">
         <div class="service-content">
           <h2 class="service-title">
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+          {{service.title}}
+            <!-- <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a> -->
           </h2>
-          {{ service.content | markdownify | strip_html | truncate: 100 }}
+          {{ service.content | markdownify | strip_html | truncate: 200 }}
         </div>
       </div>
     </div>
     {% endfor %}
     <div class="col-12 text-center">
-      <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Services</a>
+      <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Research</a>
     </div>
   </div>
 </div>
 
-<div class="container pt-5 pb-5 pt-md-7 pb-md-7">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <h2 class="title-3 text-dark mb-4">Our Features</h2>
-    </div>
-    {% for feature in site.data.features %}
+<!-- <div class="container pt-5 pb-5 pt-md-7 pb-md-7"> -->
+<!--   <div class="row justify-content-center"> -->
+<!--     <div class="col-12"> -->
+<!--       <h2 class="title-3 text-dark mb-4">Our Features</h2> -->
+<!--     </div> -->
+<!--     {% for feature in site.data.features %} -->
     <div class="col-12 col-md-6 col-lg-4 mb-2">
-      <div class="feature">
-        {% if feature.image %}<div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %}
-        <h2 class="feature-title">{{ feature.title }}</h2>
-        <div class="feature-content">{{ feature.description }}</div>
-      </div>
+      <!-- <div class="feature"> -->
+<!--         {% if feature.image %}<div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %} -->
+<!--         <h2 class="feature-title">{{ feature.title }}</h2> -->
+<!--         <div class="feature-content">{{ feature.description }}</div> -->
+      <!-- </div> -->
     </div>
-    {% endfor %}
+<!--     {% endfor %} -->
   </div>
 </div>
