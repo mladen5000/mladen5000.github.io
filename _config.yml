@@ -2,6 +2,7 @@ baseurl: ''
 exclude: ['README.md']
 permalink: pretty
 title: 'FinnPerkins'
+url: http://finnperkins.lab.uic.edu 
 
 collections:
   services:
