@@ -1,7 +1,7 @@
 ---
-title: 'Kai Huang'
-image: '/images/team/kai2020.png'
-jobtitle: 'Graduate Student'
-email: 'email at uic.edu'
+title: 'Mladen Rasic'
+image: '/images/team/mrasic2.jpg'
+jobtitle: 'Graduate Student (G3)'
+email: 'mrasic2 at uic.edu'
 ---
 
