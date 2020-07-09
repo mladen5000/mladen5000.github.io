@@ -1,4 +1,7 @@
-email: 'zerostaticthemes@gmail.com'
+email: 'lab email at uic.edu'
 phone: 'XXXX XXX XXX'
 businessName: 'Hugo Serif'
-address: ''
+address:
+    street: 909 South Wolcott Avenue,
+    room: Room 3060,
+    city: Chicago, IL 60612
