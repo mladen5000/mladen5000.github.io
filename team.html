@@ -5,41 +5,76 @@ bodyClass: page-team-list
 ---
 
 <div class="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Meet The Team</h1>
-        <br>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Meet The Team</h1>
+                <br>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<div class="container pb-6">
-  <div class="row">
-    {% for team in site.team %}
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
+<!-- PIs --!>
+    {% for team in site.fp %}
+    <div class="container">
+    <div class="row">
+        <div class="team-image">
+            <img alt="{{ team.title }} logo" class="img-fluid mb-2" src="{{site.baseurl}}{{ team.image }}" /> 
+        </div>
+        <div class="col-md-6 pl-5">
+            <h2 class="team-name">{{ team.title }}</h2>
+            <p class="team-description">{{ team.jobtitle }}</p>
+            <p class="team-description">Email: {{team.email}}</p> 
+            <p class="team-description">{{team.content}}</p> 
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+
+
+<div class="intro">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4"></div>
+            <div class="col-md-4">
+                    <h1>Members</h1>
+                    <br>
+            </div>
+        <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Lab members --!>
+        <div class="container">
+        <div class="row">
+        {% for team in site.team %}
+        <div class="col-12 col-md-6 mb-1">
+        <div class="team team-summary">
         {% if team.image %}
         <div class="team-image">
-          <img
+        <img
             alt="{{ team.title }} logo"
             class="img-fluid mb-2"
             src="{{site.baseurl}}{{ team.image }}"
-          />
+            />
+            </div>
+            {% endif %}
+            <div class="team-meta">
+            <h2 class="team-name">{{ team.title }}</h2>
+            <p class="team-description">{{ team.jobtitle }}</p>
+            {% if team.email%}
+            <p class="team-description">Email: {{team.email}}</p>
+            <!-- <a target="_blank" href="{{ team.email}}">email</a> --> 
+            {% endif %}
+            </div>
+            <div class="team-content">{{ team.content }}</div>
         </div>
-        {% endif %}
-        <div class="team-meta">
-          <h2 class="team-name">{{ team.title }}</h2>
-          <p class="team-description">{{ team.jobtitle }}</p>
-          {% if team.email%}
-          <p class="team-description">Email: {{team.email}}</h2>
-          <!-- <a target="_blank" href="{{ team.email}}">email</a> --> 
-          {% endif %}
         </div>
-        <div class="team-content">{{ team.content }}</div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+        {% endfor %}
+        </div>
+        </div>
+        </div>
