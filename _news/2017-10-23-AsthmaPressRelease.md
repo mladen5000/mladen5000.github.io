@@ -2,10 +2,7 @@
 layout: media
 title: Asthma Press Release
 url: 
-image: 
-  feature: fp.jpg
-  teaser: fp.jpg
-
+image: /images/fp.jpg 
 ---
 
 

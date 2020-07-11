@@ -1,44 +1,42 @@
 ---
 title: news
 layout: default
-bodyClass: page-testimonials-list
+bodyClass: page-team-list
 ---
 
 <!-- Headline part !-->
 <div class="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>News</h1>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Markdown here !-->
-<div class="container pb-12">
-  <div class="row">
-    {% for new in site.news %}
-    <div class="col-12 ">
-      <div class="testimonials testimonials-summary">
-        <div class="testimonials-meta">
-          <h2 class="testimonials-title">{{ news.title }}</h2>
-          <!-- <p class="testimonials-name">{{ new.name }}</p> -->
-          <!-- <p class="testimonials-jobtitle">{{ new.jobtitle }}</p> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>News</h1>
+            </div>
         </div>
-        <div class="testimonials-content">{{ new.content }}</div>
-      </div>
     </div>
-    {% endfor %}
-  </div>
 </div>
 
-<!-- original md file -->
-<!-- layout: media -->
-<!-- title: Asthma Press Release -->
-<!-- url: --> 
-<!-- image: --> 
-<!--   feature: fp.jpg -->
-<!--   teaser: fp.jpg -->
+<div class="container pb-9">
+    <div class="row">
+        {% for new in site.news %}
+        <div class="col-12 col-md-9 mb-3 ">
+            <div class="team team-summary">
+                <!-- {% if new.image %} -->
+                <!-- <div class="team-image text-center"> -->
+                <!--     <img -->
+                <!--         alt="{{ new.title }} logo" -->
+                <!--         class="img-fluid mb-2" -->
+                <!--         src="{{site.baseurl}}{{ new.image }}" -->
+                <!--         /> -->
+                <!-- </div> -->
+                <!-- {% endif %} -->
+                <div class="team-meta">
+                    <h2 class="team-name">{{ new.title }}</h2>
+                <div class="team-content">{{ new.content }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
-<!-- [New asthma biomarkers identified from lung bacteria](https://today.uic.edu/new-asthma-biomarkers-identified-from-lung-bacteria) -->
+
