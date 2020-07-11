@@ -4,6 +4,7 @@ layout: default
 bodyClass: page-home
 ---
 
+<!-- Opening text--!>
 <div class="intro pb-4">
   <div class="container">
     <h1>Our Lab.</h1>
@@ -12,6 +13,41 @@ bodyClass: page-home
   </div>
 </div>
 
+
+<!-- Research Section --!>
+<div class="container pt-8 pt-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h2 class="title-3 text-dark mb-3">
+        <a href="{{site.baseurl}}{{ service.url }}">
+        Our Research..
+        </a>
+      </h2>
+    </div>
+    {% for service in site.services %}
+    <div class="col-12 col-md-4 mb-1">
+      <div class="service service-summary">
+        <div class="service-content">
+          <h2 class="service-title">
+          <!-- {{service.title}} -->
+          <!-- <a href="{{site.baseurl}}/services/">{{ service.title }}</a> -->
+          </h2>
+          {{ service.content | markdownify | strip_html | truncate: 200 }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="col-12 text-center">
+      <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Research</a>
+    </div>
+  </div>
+</div>
+
+<!-- Extra Spacing PT(padding top)--!>
+<div class="container pt-4 pt-md-5">
+</div>
+
+<!-- Contact info--!>
 <div class="container pt-2">
   <div class="call">
     <div class="call-box-top">
@@ -28,31 +64,7 @@ bodyClass: page-home
   </div>
 </div>
 
-<!-- Research Section --!>
-<div class="container pt-8 pt-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">Our Research.</h2>
-    </div>
-    {% for service in site.services %}
-    <div class="col-12 col-md-4 mb-1">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-          <!-- {{service.title}} -->
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-          </h2>
-          {{ service.content | markdownify | strip_html | truncate: 200 }}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-    <div class="col-12 text-center">
-      <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Research</a>
-    </div>
-  </div>
-</div>
-
+<!-- Features section (removed) --!>
 <!-- <div class="container pt-5 pb-5 pt-md-7 pb-md-7"> -->
 <!--   <div class="row justify-content-center"> -->
 <!--     <div class="col-12"> -->
